@@ -1,8 +1,18 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 const Footer = () => {
-  return <h4>footer</h4>
-}
+  const now = new Date();
+  return (
+    <Wrapper>
+      <h5>
+        &copy; {`${now.getDate()}`.padStart(2, '0')} /
+        {`${now.getMonth() + 1}`.padStart(2, '0')} /{now.getFullYear()}
+      </h5>
+      <h5>thenguyenngochn@gmail.com</h5>
+      <h5>Ngoc The - Shop </h5>
+    </Wrapper>
+  );
+};
 
 const Wrapper = styled.footer`
   height: 5rem;
@@ -26,6 +36,6 @@ const Wrapper = styled.footer`
   @media (min-width: 776px) {
     flex-direction: row;
   }
-`
+`;
 
-export default Footer
+export default Footer;

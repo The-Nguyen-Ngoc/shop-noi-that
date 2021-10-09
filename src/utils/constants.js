@@ -1,5 +1,5 @@
-import React from 'react'
-import { GiCompass, GiDiamondHard, GiStabbedNote } from 'react-icons/gi'
+import React from 'react';
+import { GiCompass, GiDiamondHard, GiStabbedNote } from 'react-icons/gi';
 export const links = [
   {
     id: 1,
@@ -16,32 +16,34 @@ export const links = [
     text: 'products',
     url: '/products',
   },
-]
+  {
+    id: 4,
+    text: 'checkout',
+    url: '/checkout',
+  },
+];
 
 export const services = [
   {
     id: 1,
     icon: <GiCompass />,
-    title: 'mission',
-    text:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates, ea. Perferendis corrupti reiciendis nesciunt rerum velit autem unde numquam nisi',
+    title: 'xứ mệnh',
+    text: 'Mang đến cho ngôi nhà của bạn không gian đẹp nhất',
   },
   {
     id: 2,
     icon: <GiDiamondHard />,
-    title: 'vision',
-    text:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates, ea. Perferendis corrupti reiciendis nesciunt rerum velit autem unde numquam nisi',
+    title: 'góc nhìn',
+    text: 'Góc nhìn từ những nhà thiết kế có nhiều năm kinh nghiệm, sẽ mang lại trải nghiệm tốt nhất cho không gian của bạn',
   },
   {
     id: 3,
     icon: <GiStabbedNote />,
-    title: 'history',
-    text:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates, ea. Perferendis corrupti reiciendis nesciunt rerum velit autem unde numquam nisi',
+    title: 'lịch sử',
+    text: 'Chúng tôi có lịch sử lâu đời trong ngành nội thật trên thế giới',
   },
-]
+];
 
-export const products_url = 'https://course-api.com/react-store-products'
+export const products_url = 'https://course-api.com/react-store-products';
 
-export const single_product_url = `https://course-api.com/react-store-single-product?id=`
+export const single_product_url = `https://course-api.com/react-store-single-product?id=`;
