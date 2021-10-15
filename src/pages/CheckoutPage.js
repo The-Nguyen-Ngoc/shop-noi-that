@@ -9,10 +9,24 @@ const CheckoutPage = () => {
   return (
     <main>
       <PageHero title='checkout' />
-      <Wrapper className='page'></Wrapper>
-      <h1>Thanh toan </h1>
+      <Wrapper className='page'>
+        <div
+          style={{
+            backgroundColor: '#fff565',
+            textAlign: 'center',
+            height: '400px',
+            fontSize: '30px',
+          }}
+        >
+          Loading...
+        </div>
+      </Wrapper>
     </main>
   );
 };
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  .page {
+    background-color: #fff565;
+  }
+`;
 export default CheckoutPage;

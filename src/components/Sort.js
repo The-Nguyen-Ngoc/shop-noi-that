@@ -1,10 +1,54 @@
-import React from 'react'
-import { useFilterContext } from '../context/filter_context'
-import { BsFillGridFill, BsList } from 'react-icons/bs'
-import styled from 'styled-components'
+import React from 'react';
+import { useFilterContext } from '../context/filter_context';
+import { BsFillGridFill, BsList } from 'react-icons/bs';
+import styled from 'styled-components';
 const Sort = () => {
-  return <h4>sort </h4>
-}
+  const {
+    filtered_products: products,
+    grid_view,
+    setGridView,
+    setListView,
+    sort,
+    updateSort,
+  } = useFilterContext();
+  return (
+    <Wrapper>
+      <div className='btn-container'>
+        <button
+          onClick={setGridView}
+          type='button'
+          className={`${grid_view ? 'active' : null}`}
+        >
+          <BsFillGridFill />
+        </button>
+        <button
+          onClick={setListView}
+          type='button'
+          className={`${!grid_view ? 'active' : null}`}
+        >
+          <BsList />
+        </button>
+      </div>
+      <p>{products.length} sản phẩm được tìm thấy</p>
+      <hr />
+      <form>
+        <label htmlFor='sort'>Sắp xếp</label>
+        <select
+          value={sort}
+          onChange={updateSort}
+          name='sort'
+          id='sort'
+          className='sort-input'
+        >
+          <option value='price-lowest'>Giá (Tăng dần)</option>
+          <option value='price-highest'>Giá (Giảm dần)</option>
+          <option value='name-a'>Tên (A-Z)</option>
+          <option value='name-z'>Tên (Z-A)</option>
+        </select>
+      </form>
+    </Wrapper>
+  );
+};
 
 const Wrapper = styled.section`
   display: grid;
@@ -67,6 +111,6 @@ const Wrapper = styled.section`
     font-size: 1rem;
     text-transform: capitalize;
   }
-`
+`;
 
-export default Sort
+export default Sort;

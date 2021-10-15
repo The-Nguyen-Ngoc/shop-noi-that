@@ -25,12 +25,13 @@ const AboutPage = () => {
             khách hàng, chúng tôi hy vọng có thể chia sẻ một niềm tin cố hữu với
             tất cả mọi người: “Cuộc sống sẽ trở nên tốt đẹp hơn khi không gian
             sống được quan tâm và đầu tư đúng mực.
-          </p>
+                </p>
         </article>
       </Wrapper>
     </main>
   );
 };
+ 
 
 const Wrapper = styled.section`
   display: grid;

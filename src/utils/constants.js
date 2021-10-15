@@ -3,23 +3,18 @@ import { GiCompass, GiDiamondHard, GiStabbedNote } from 'react-icons/gi';
 export const links = [
   {
     id: 1,
-    text: 'home',
+    text: 'trang chủ',
     url: '/',
   },
   {
     id: 2,
-    text: 'about',
+    text: 'Về chúng tôi',
     url: '/about',
   },
   {
     id: 3,
-    text: 'products',
+    text: 'Sản phẩm',
     url: '/products',
-  },
-  {
-    id: 4,
-    text: 'checkout',
-    url: '/checkout',
   },
 ];
 

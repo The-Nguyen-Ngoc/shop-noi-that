@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import logo from '../assets/logo.svg';
+import img from '../assets/country-house.png';
+
 import { FaBars } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { links } from '../utils/constants';
@@ -9,13 +11,18 @@ import { useProductsContext } from '../context/products_context';
 import { useUserContext } from '../context/user_context';
 
 const Nav = () => {
-  const { isSidebarOpen, openSidebar } = useProductsContext();
+  const { openSidebar } = useProductsContext();
+  const { myUser } = useUserContext();
   return (
     <NavContainer>
       <div className='nav-center'>
         <div className='nav-header'>
           <Link to='/'>
-            <img src={logo} alt='noi that ngoc the' />
+            <img
+              src={img}
+              alt='noi that ngoc the'
+              style={{ width: '80px', height: '60px' }}
+            />
           </Link>
           <button className='nav-toggle' type='button' onClick={openSidebar}>
             <FaBars />
@@ -30,6 +37,11 @@ const Nav = () => {
               </li>
             );
           })}
+          {myUser && (
+            <li>
+              <Link to='/checkout'>Thanh toán</Link>
+            </li>
+          )}
         </ul>
         <CartButtons />
       </div>

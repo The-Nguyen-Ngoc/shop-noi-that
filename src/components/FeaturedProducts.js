@@ -29,6 +29,9 @@ const FeaturedProducts = () => {
           return <Product key={product.id} {...product} />;
         })}
       </div>
+      <Link className='btn' to='/products'>
+        Tất cả sản phẩm
+      </Link>
     </Wrapper>
   );
 };
